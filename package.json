@@ -1,0 +1,18 @@
+{
+  "name": "questGenerator",
+  "version": "0.1.0",
+  "description": "A simple Quest Generator",
+  "main": "out/QuestGenerator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "keywords": [],
+  "author": "Vbitz (jsarsbrook@gmail.com)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^8.0.19",
+    "typescript": "^2.4.2"
+  }
+}
