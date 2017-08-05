@@ -9,7 +9,7 @@
     "watch": "tsc -w"
   },
   "keywords": [],
-  "author": "Vbitz (jsarsbrook@gmail.com)",
+  "author": "Joshua Scarsbrook (jsarsbrook@gmail.com)",
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/node": "^8.0.19",
