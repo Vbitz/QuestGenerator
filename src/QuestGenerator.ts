@@ -14,6 +14,12 @@
    limitations under the License.
 */
 
+/**
+ * A simple Quest Generator
+ * @author Joshua Scarsbrook
+ * @module QuestGenerator
+ */
+
 // tslint:disable:interface-name
 
 /*
@@ -43,7 +49,7 @@
 /**
  * Basic fields for all step types.
  */
-interface BaseQuestStep {
+export interface BaseQuestStep {
     /**
      * The step directly preceding this step.
      */
@@ -58,14 +64,14 @@ interface BaseQuestStep {
 /**
  * Structure describing one step
  */
-type QuestStep = BaseQuestStep;
+export type QuestStep = BaseQuestStep;
 
 /**
  * Helper function to create @code{BaseQuestStep}.
  * @param previous The step directly preceding this step.
  * @param hidden Should the quest be displayed to players?
  */
-function makeBaseStep(previous: QuestStep | null, hidden: boolean): BaseQuestStep {
+export function makeBaseStep(previous: QuestStep | null, hidden: boolean): BaseQuestStep {
     return { previous, hidden };
 }
 

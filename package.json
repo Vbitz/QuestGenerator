@@ -6,13 +6,28 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "doc": "typedoc --out doc/ --mode modules ."
   },
   "keywords": [],
   "author": "Joshua Scarsbrook (jsarsbrook@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbitz/QuestGenerator.git"
+  },
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/node": "^8.0.19",
+    "typedoc": "^0.8.0",
+    "typedoc-plugin-external-module-name": "^1.0.9",
     "typescript": "^2.4.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/vbitz/QuestGenerator/issues"
+  },
+  "homepage": "https://github.com/vbitz/QuestGenerator#readme",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {}
 }
