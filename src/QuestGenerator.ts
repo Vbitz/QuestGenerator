@@ -49,6 +49,14 @@ import * as crypto from "crypto";
     determines the order of elements. The concept of this grammar is based off
     https://dl.acm.org/citation.cfm?id=2000920. This grammar is executed as a
     state machine.
+
+    Player characters will be introduced into questing and until then the
+    testing strategy is to automate player interactions with the world. This
+    system also adds randomness to the world being generated without
+    significantly diverting development resources. AI players can be used
+    for wider world generation with a large enough range of actions. By
+    restricting the AI actions using budgets resource scarcity can be
+    simulated.
 */
 
 const ID_LENGTH = 4;
