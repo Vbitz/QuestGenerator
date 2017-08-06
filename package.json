@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "watch": "tsc -w",
-    "doc": "typedoc --out doc/ --mode modules ."
+    "doc": "typedoc --out doc/ --exclude **/licenseHeader.ts --mode modules ."
   },
   "keywords": [],
   "author": "Joshua Scarsbrook (jsarsbrook@gmail.com)",

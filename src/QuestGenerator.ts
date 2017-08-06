@@ -1,24 +1,28 @@
-/*
-   Copyright 2017 Joshua Scarsbrook
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-*/
-
 /**
- * A simple Quest Generator
+ * @license
+ * ```plain
+ * Copyright 2017 Joshua Scarsbrook
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ```
  * @author Joshua Scarsbrook
  * @module QuestGenerator
+ * @description
+ * A simple Quest Generator
  */
+
+/** */
+import * as crypto from "crypto";
 
 // tslint:disable:interface-name
 
@@ -47,6 +51,15 @@
 */
 
 /**
+ * Generates a random identifier
+ * @param type The prefix of the identifier to generate
+ * @return A random identifier in the format `{type}_{8 pseudo random bytes}`
+ */
+function makeIdentifier(type: string) {
+    return type + "_" + crypto.pseudoRandomBytes(4).toString("hex");
+}
+
+/**
  * Basic fields for all step types.
  */
 export interface BaseQuestStep {
@@ -65,6 +78,17 @@ export interface BaseQuestStep {
  * Structure describing one step
  */
 export type QuestStep = BaseQuestStep;
+
+/**
+ * Structure describing a single quest
+ */
+export interface Quest {
+    /**
+     * A list of all steps in a quest.
+     * The quest always starts with the first step.
+     */
+    steps: QuestStep[];
+}
 
 /**
  * Helper function to create {@link BaseQuestStep}
