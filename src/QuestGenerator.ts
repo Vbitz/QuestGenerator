@@ -14,6 +14,8 @@
    limitations under the License.
 */
 
+// tslint:disable:interface-name
+
 /*
     The basic unit for determining quest difficulty is a swing factor.
     A quest with +10 swing has a large scale positive outcome and a quest
@@ -38,9 +40,51 @@
     state machine.
 */
 
+/**
+ * Basic fields for all step types.
+ */
+interface BaseQuestStep {
+    /**
+     * The step directly preceding this step.
+     */
+    previous: QuestStep | null;
+
+    /**
+     * Should the quest be displayed to players?
+     */
+    hidden: boolean;
+}
+
+/**
+ * Structure describing one step
+ */
+type QuestStep = BaseQuestStep;
+
+/**
+ * Helper function to create @code{BaseQuestStep}.
+ * @param previous The step directly preceding this step.
+ * @param hidden Should the quest be displayed to players?
+ */
+function makeBaseStep(previous: QuestStep | null, hidden: boolean): BaseQuestStep {
+    return { previous, hidden };
+}
+
+/**
+ * A single world containing a structure of quests.
+ */
+export class QuestGenerator {
+    /**
+     * Generate a single quest step.
+     */
+    public generateStep(): QuestStep {
+        return makeBaseStep(null, false);
+    }
+}
+
 function main(args: string[]): number {
-    // tslint:disable-next-line:no-console
-    console.log("Hello, World");
+    const generator = new QuestGenerator();
+
+    const currentStep = generator.generateStep();
     return 0;
 }
 
