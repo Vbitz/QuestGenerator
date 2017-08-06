@@ -12,3 +12,8 @@ npm run build
 ```
 
 Compiled JavaScript files will be output to the out/ directory.
+
+## Documentation
+
+Documentation is produced using [TypeDoc](https://typedoc.org/). It should be up to date in the
+repository but you can generate it yourself using `npm run doc`.
