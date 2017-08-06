@@ -67,7 +67,7 @@ export interface BaseQuestStep {
 export type QuestStep = BaseQuestStep;
 
 /**
- * Helper function to create @code{BaseQuestStep}.
+ * Helper function to create {@link BaseQuestStep}
  * @param previous The step directly preceding this step.
  * @param hidden Should the quest be displayed to players?
  */
@@ -87,13 +87,19 @@ export class QuestGenerator {
     }
 }
 
+/**
+ * Main entry point
+ * @param args Command line arguments
+ * @return Program exit code
+ */
 function main(args: string[]): number {
     const generator = new QuestGenerator();
 
     const currentStep = generator.generateStep();
+
     return 0;
 }
 
 if (process.mainModule === module) {
-    main(process.argv);
+    process.exitCode = main(process.argv);
 }
