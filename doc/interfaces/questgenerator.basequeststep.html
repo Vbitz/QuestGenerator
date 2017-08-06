@@ -92,7 +92,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="questgenerator.basequeststep.html#hidden" class="tsd-kind-icon">hidden</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="questgenerator.basequeststep.html#previous" class="tsd-kind-icon">previous</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="questgenerator.basequeststep.html#id" class="tsd-kind-icon">id</a></li>
 							</ul>
 						</section>
 					</div>
@@ -106,7 +106,7 @@
 					<div class="tsd-signature tsd-kind-icon">hidden<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Vbitz/QuestGenerator/blob/f2ff90d/src/QuestGenerator.ts#L74">QuestGenerator.ts:74</a></li>
+							<li>Defined in <a href="https://github.com/Vbitz/QuestGenerator/blob/bfff93e/src/QuestGenerator.ts#L77">QuestGenerator.ts:77</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -116,17 +116,17 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="previous" class="tsd-anchor"></a>
-					<h3>previous</h3>
-					<div class="tsd-signature tsd-kind-icon">previous<span class="tsd-signature-symbol">:</span> <a href="../modules/questgenerator.html#queststep" class="tsd-signature-type">QuestStep</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Vbitz/QuestGenerator/blob/f2ff90d/src/QuestGenerator.ts#L69">QuestGenerator.ts:69</a></li>
+							<li>Defined in <a href="https://github.com/Vbitz/QuestGenerator/blob/bfff93e/src/QuestGenerator.ts#L82">QuestGenerator.ts:82</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The step directly preceding this step.</p>
+							<p>Unique identifier generated with <a href="../modules/questgenerator.html#makeidentifier">makeIdentifier</a></p>
 						</div>
 					</div>
 				</section>
@@ -148,6 +148,9 @@
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/questgenerator.questgenerator-1.html" class="tsd-kind-icon">Quest<wbr>Generator</a>
 					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="../classes/questgenerator.questinterface.html" class="tsd-kind-icon">Quest<wbr>Interface</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
@@ -157,17 +160,26 @@
 								<a href="questgenerator.basequeststep.html#hidden" class="tsd-kind-icon">hidden</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="questgenerator.basequeststep.html#previous" class="tsd-kind-icon">previous</a>
+								<a href="questgenerator.basequeststep.html#id" class="tsd-kind-icon">id</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="questgenerator.quest.html" class="tsd-kind-icon">Quest</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/questgenerator.html#identifiertype" class="tsd-kind-icon">Identifier<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/questgenerator.html#identifiertype_step" class="tsd-kind-icon">Identifier<wbr>Type_<wbr><wbr>Step</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/questgenerator.html#queststep" class="tsd-kind-icon">Quest<wbr>Step</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/questgenerator.html#id_length" class="tsd-kind-icon">ID_<wbr>LENGTH</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/questgenerator.html#id_step_prefix" class="tsd-kind-icon">ID_<wbr>STEP_<wbr>PREFIX</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/questgenerator.html#main" class="tsd-kind-icon">main</a>

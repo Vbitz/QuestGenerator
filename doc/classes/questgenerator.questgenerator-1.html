@@ -91,7 +91,10 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="questgenerator.questgenerator-1.html#generatestep" class="tsd-kind-icon">generate<wbr>Step</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="questgenerator.questgenerator-1.html#generatequest" class="tsd-kind-icon">generate<wbr>Quest</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="questgenerator.questgenerator-1.html#generatestep" class="tsd-kind-icon">generate<wbr>Step</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="questgenerator.questgenerator-1.html#getinterface" class="tsd-kind-icon">get<wbr>Interface</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="questgenerator.questgenerator-1.html#startquest" class="tsd-kind-icon">start<wbr>Quest</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,17 +102,39 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="generatequest" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> generate<wbr>Quest</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Quest<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/questgenerator.html#queststep" class="tsd-signature-type">QuestStep</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Vbitz/QuestGenerator/blob/bfff93e/src/QuestGenerator.ts#L128">QuestGenerator.ts:128</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generate a full quest line.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/questgenerator.html#queststep" class="tsd-signature-type">QuestStep</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
 					<a name="generatestep" class="tsd-anchor"></a>
-					<h3>generate<wbr>Step</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> generate<wbr>Step</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
 						<li class="tsd-signature tsd-kind-icon">generate<wbr>Step<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/questgenerator.html#queststep" class="tsd-signature-type">QuestStep</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Vbitz/QuestGenerator/blob/f2ff90d/src/QuestGenerator.ts#L109">QuestGenerator.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/Vbitz/QuestGenerator/blob/bfff93e/src/QuestGenerator.ts#L121">QuestGenerator.ts:121</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -118,6 +143,59 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="../modules/questgenerator.html#queststep" class="tsd-signature-type">QuestStep</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="getinterface" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>Interface</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Interface<span class="tsd-signature-symbol">(</span>initialStep<span class="tsd-signature-symbol">: </span><a href="../modules/questgenerator.html#queststep" class="tsd-signature-type">QuestStep</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="questgenerator.questinterface.html" class="tsd-signature-type">QuestInterface</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Vbitz/QuestGenerator/blob/bfff93e/src/QuestGenerator.ts#L136">QuestGenerator.ts:136</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a public interface for a single QuestStep.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>initialStep: <a href="../modules/questgenerator.html#queststep" class="tsd-signature-type">QuestStep</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The initial step of the quest</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="questgenerator.questinterface.html" class="tsd-signature-type">QuestInterface</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="startquest" class="tsd-anchor"></a>
+					<h3>start<wbr>Quest</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">start<wbr>Quest<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="questgenerator.questinterface.html" class="tsd-signature-type">QuestInterface</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Vbitz/QuestGenerator/blob/bfff93e/src/QuestGenerator.ts#L114">QuestGenerator.ts:114</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Starts a new quest and returns the definition.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="questgenerator.questinterface.html" class="tsd-signature-type">QuestInterface</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -141,21 +219,42 @@
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
 						<a href="questgenerator.questgenerator-1.html" class="tsd-kind-icon">Quest<wbr>Generator</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="questgenerator.questgenerator-1.html#generatequest" class="tsd-kind-icon">generate<wbr>Quest</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="questgenerator.questgenerator-1.html#generatestep" class="tsd-kind-icon">generate<wbr>Step</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="questgenerator.questgenerator-1.html#getinterface" class="tsd-kind-icon">get<wbr>Interface</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="questgenerator.questgenerator-1.html#startquest" class="tsd-kind-icon">start<wbr>Quest</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="questgenerator.questinterface.html" class="tsd-kind-icon">Quest<wbr>Interface</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/questgenerator.basequeststep.html" class="tsd-kind-icon">Base<wbr>Quest<wbr>Step</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/questgenerator.quest.html" class="tsd-kind-icon">Quest</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/questgenerator.html#identifiertype" class="tsd-kind-icon">Identifier<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/questgenerator.html#identifiertype_step" class="tsd-kind-icon">Identifier<wbr>Type_<wbr><wbr>Step</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/questgenerator.html#queststep" class="tsd-kind-icon">Quest<wbr>Step</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/questgenerator.html#id_length" class="tsd-kind-icon">ID_<wbr>LENGTH</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/questgenerator.html#id_step_prefix" class="tsd-kind-icon">ID_<wbr>STEP_<wbr>PREFIX</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/questgenerator.html#main" class="tsd-kind-icon">main</a>

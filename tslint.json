@@ -4,6 +4,42 @@
         "tslint:recommended"
     ],
     "jsRules": {},
-    "rules": {},
+    "rules": {
+        "no-namespace": true,
+        "no-magic-numbers": true,
+        "completed-docs": [
+            true,
+            "classes",
+            "functions",
+            "methods",
+            "properties"
+        ],
+        "no-unused-variable": true,
+        "indent": [
+            true,
+            "spaces",
+            4
+        ],
+        "linebreak-style": [
+            true,
+            "LF"
+        ],
+        "class-name": true,
+        "interface-name": [
+            false,
+            "never-prefix"
+        ],
+        "semicolon": [
+            true,
+            "always"
+        ],
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-leading-underscore"
+        ],
+        "object-literal-sort-keys": false
+    },
     "rulesDirectory": []
 }

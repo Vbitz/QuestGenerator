@@ -24,7 +24,8 @@
 /** */
 import * as crypto from "crypto";
 
-// tslint:disable:interface-name
+// TODO(jscarsbrook): Refactor interfaces and classes into separate files.
+// tslint:disable:max-classes-per-file
 
 /*
     The basic unit for determining quest difficulty is a swing factor.
@@ -50,28 +51,35 @@ import * as crypto from "crypto";
     state machine.
 */
 
+const ID_LENGTH = 4;
+
 /**
  * Generates a random identifier
  * @param type The prefix of the identifier to generate
  * @return A random identifier in the format `{type}_{8 pseudo random bytes}`
  */
-function makeIdentifier(type: string) {
-    return type + "_" + crypto.pseudoRandomBytes(4).toString("hex");
+function makeIdentifier(type: IdentifierType) {
+    return type + "_" + crypto.pseudoRandomBytes(ID_LENGTH).toString("hex");
 }
+
+type IdentifierType_Step = "step";
+type IdentifierType = IdentifierType_Step;
+
+const ID_STEP_PREFIX: IdentifierType_Step = "step";
 
 /**
  * Basic fields for all step types.
  */
 export interface BaseQuestStep {
     /**
-     * The step directly preceding this step.
-     */
-    previous: QuestStep | null;
-
-    /**
      * Should the quest be displayed to players?
      */
     hidden: boolean;
+
+    /**
+     * Unique identifier generated with {@link makeIdentifier}
+     */
+    id: string;
 }
 
 /**
@@ -80,23 +88,20 @@ export interface BaseQuestStep {
 export type QuestStep = BaseQuestStep;
 
 /**
- * Structure describing a single quest
+ * Public interface to quest information.
  */
-export interface Quest {
-    /**
-     * A list of all steps in a quest.
-     * The quest always starts with the first step.
-     */
-    steps: QuestStep[];
+export class QuestInterface {
+    constructor(protected generator: QuestGenerator, protected currentStep: QuestStep) { }
 }
 
 /**
  * Helper function to create {@link BaseQuestStep}
- * @param previous The step directly preceding this step.
- * @param hidden Should the quest be displayed to players?
  */
-export function makeBaseStep(previous: QuestStep | null, hidden: boolean): BaseQuestStep {
-    return { previous, hidden };
+export function makeBaseStep(): BaseQuestStep {
+    return {
+        hidden: false,
+        id: makeIdentifier(ID_STEP_PREFIX),
+    };
 }
 
 /**
@@ -104,10 +109,32 @@ export function makeBaseStep(previous: QuestStep | null, hidden: boolean): BaseQ
  */
 export class QuestGenerator {
     /**
+     * Starts a new quest and returns the definition.
+     */
+    public startQuest(): QuestInterface {
+        return this.getInterface(this.generateQuest());
+    }
+
+    /**
      * Generate a single quest step.
      */
-    public generateStep(): QuestStep {
-        return makeBaseStep(null, false);
+    private generateStep(): QuestStep {
+        return makeBaseStep();
+    }
+
+    /**
+     * Generate a full quest line.
+     */
+    private generateQuest(): QuestStep {
+        return this.generateStep();
+    }
+
+    /**
+     * Creates a public interface for a single QuestStep.
+     * @param initialStep The initial step of the quest
+     */
+    private getInterface(initialStep: QuestStep): QuestInterface {
+        return new QuestInterface(this, initialStep);
     }
 }
 
@@ -119,7 +146,7 @@ export class QuestGenerator {
 function main(args: string[]): number {
     const generator = new QuestGenerator();
 
-    const currentStep = generator.generateStep();
+    const questDefinition = generator.startQuest();
 
     return 0;
 }
